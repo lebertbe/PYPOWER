@@ -139,7 +139,7 @@ def savecase(fname, ppc, comment=None, version='2'):
                 fd.write('%s[%d, %d, %.9g, %.9g, %.9g, %.9g, %d, %.9g, %.9g, %.9g, %d, %.9g, %.9g],\n' % ((indent2,) + tuple(bus[i, :VMIN + 1])))
         else:                            ## opf SOLVED, save with lambda's & mu's
             for i in range(bus.shape[0]):
-                fd.write('%s[%d, %d, %.9g, %.9g, %.9g, %.9g, %d, %.9g, %.9g, %.9g, %d, %.9g, %.9g, %.4f, %.4f, %.4f, %.4f],\n' % ((indent2,) + tuple(bus[:, :MU_VMIN + 1])))
+                fd.write('%s[%d, %d, %.9g, %.9g, %.9g, %.9g, %d, %.9g, %.9g, %.9g, %d, %.9g, %.9g, %.4f, %.4f, %.4f, %.4f],\n' % ((indent2,) + tuple(bus[i, :MU_VMIN + 1])))
         fd.write('%s])\n' % indent)
 
         ## generator data
